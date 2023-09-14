@@ -11,7 +11,7 @@ def get_column(file_name, query_column, query_value, result_column=1):
     
     query_value : the value to match in the query column
     
-    result_column : the index of the column whose values will be returned
+    result_column : the index of the column whose values will be extracted
     
     Returns
     -------
