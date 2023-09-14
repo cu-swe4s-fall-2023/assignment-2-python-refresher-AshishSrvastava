@@ -1,4 +1,4 @@
-def get_column(file_name, query_column, query_value, result_column):
+def get_column(file_name, query_column, query_value, result_column=1):
     """extracts a target (result) column of data from a CSV file based on 
     a query value in a query column
      
