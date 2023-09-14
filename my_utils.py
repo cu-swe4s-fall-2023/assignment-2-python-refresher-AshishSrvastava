@@ -1,6 +1,6 @@
 def get_column(file_name, query_column, query_value, result_column):
-    """extracts a target column of data from a CSV file based on 
-       a query value in a query column
+    """extracts a target (result) column of data from a CSV file based on 
+    a query value in a query column
      
         
     Parameters
