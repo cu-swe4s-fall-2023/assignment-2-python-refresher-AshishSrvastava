@@ -83,35 +83,34 @@ def main():
     # file_name = 'Agrofood_co2_emission.csv'
     file_name = args.file_name
     
-    savannah_fires_strings_list = my_utils.get_column(file_name, 
+    savannah_fires_list = my_utils.get_column(file_name, 
                                                       country_column, 
                                                       country, 
                                                       result_column=savannah_fires_column)
-    forest_fires_string_list = my_utils.get_column(file_name, 
+    forest_fires_list = my_utils.get_column(file_name, 
                                                    country_column, 
                                                    country, 
                                                    result_column=forest_fires_column)
-    organic_soil_fires_column = my_utils.get_column(file_name,
+    organic_soil_fires_list = my_utils.get_column(file_name,
                                                     country_column,
                                                     country,
                                                     result_column=organic_soil_fires_column)
-    humid_tropical_forest_fires_column = my_utils.get_column(file_name,
+    humid_tropical_forest_fires_list = my_utils.get_column(file_name,
                                                             country_column,
                                                             country,
                                                             result_column=humid_tropical_forest_fires_column)
     
-    savannah_fires = sum([float(fire) for fire in savannah_fires_strings_list])
-    forest_fires = sum([float(fire) for fire in forest_fires_string_list])
-    organic_soil_fires = sum([float(fire) for fire in organic_soil_fires_column])
-    humid_tropical_forest_fires = sum([float(fire) for fire in humid_tropical_forest_fires_column])
+    savannah_fires = sum(savannah_fires_list)
+    forest_fires = sum(forest_fires_list)
+    organic_soil_fires = sum(organic_soil_fires_list)
+    humid_tropical_forest_fires = sum(humid_tropical_forest_fires_list)
     
     fires = savannah_fires + forest_fires + organic_soil_fires + humid_tropical_forest_fires
     
-    years_with_fires_string_list = my_utils.get_column(file_name, 
+    years_with_fires_list = my_utils.get_column(file_name, 
                                                        country_column, 
                                                        country, 
                                                        result_column=year_column)
-    years_with_fires_list = [int(year) for year in years_with_fires_string_list]
     
     minimum_year = min(years_with_fires_list)
     maximum_year = max(years_with_fires_list)
