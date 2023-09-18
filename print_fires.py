@@ -72,8 +72,6 @@ def main():
     # organic_soil_fires_column = 22
     # humid_tropical_forest_fires_column = 23
     
-    print(f"{args=}")
-    
     country = args.country
     country_column = args.country_column
     year_column = args.year_column
