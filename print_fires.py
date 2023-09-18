@@ -1,4 +1,32 @@
+import argparse
 import my_utils
+
+
+# TODO : Add cla for country, country_column, fires_column, file_name
+
+parser = argparse.ArgumentParser(
+                description='Prints the total amount of CO2 emissions from savannah, forest, organic soil, and humid tropical fires in a given country from a given year to a given year',
+                prog='print_fires.py')
+
+parser.add_argument('--country',
+                   type=str,
+                   help='The country to collect the CO2 emissions from fires for',
+                   required=True)
+
+parser.add_argument('--country_column',
+                     type=int,
+                     help='The index of column holding the countries in the file',
+                     required=True)
+
+parser.add_argument('--fires_column',
+                     type=int,
+                     help='The index of column holding the CO2 emissions from a specific type of fire in the file',
+                     required=True)
+
+parser.add_argument('--file_name',
+                     type=str,
+                     help='The name of the file to read the data from',
+                     required=True)
 
 def main():
     country='United States of America'
