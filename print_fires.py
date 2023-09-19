@@ -69,6 +69,7 @@ args = parser.parse_args()
 
 
 def main():
+    # Parse the command line arguments
     country = args.country
     country_column = args.country_column
     year_column = args.year_column
@@ -78,6 +79,8 @@ def main():
     humid_tropical_forest_fires_column = args.humid_tropical_forest_fires_column
     file_name = args.file_name
     all_fires = args.all_fires 
+    
+    # Handle default values for fire source columns if --all_fires is used
     if all_fires:
         if savannah_fires_column is None:
             savannah_fires_column = 2
@@ -88,18 +91,17 @@ def main():
         if humid_tropical_forest_fires_column is None:
             humid_tropical_forest_fires_column = 23
     
+    # accumulators
     total_fires = 0
     fire_sources = []
     
- 
-    
     # Get the time range for when fires ocurred
-    years_with_fires_list = my_utils.get_column(file_name, 
+    years_with_fires_string_list = my_utils.get_column(file_name, 
                                                     country_column, 
                                                     country, 
                                                     result_column=year_column)
-    minimum_year = min(years_with_fires_list)
-    maximum_year = max(years_with_fires_list)
+    minimum_year = min(years_with_fires_string_list)
+    maximum_year = max(years_with_fires_string_list)
     
     # Check for which fires to include
     if savannah_fires_column != None or all_fires == True:
