@@ -2,8 +2,6 @@ import argparse
 import my_utils
 
 
-# TODO : Add cla for country, country_column, fires_column, file_name
-
 parser = argparse.ArgumentParser(
                 description='Prints the total amount of CO2 emissions from savannah, forest, organic soil, and humid tropical fires in a given country from a given year to a given year',
                 prog='print_fires.py')
