@@ -34,30 +34,30 @@ parser.add_argument('--year_column',
 
 parser.add_argument('--savannah_fires_column',
                      type=int,
-                     help='The index of column holding the CO2 emissions from savannah fires in the file',
+                     help='The index of column holding the CO2 emissions from savannah fires in the file (defaults to 2)',
                      nargs='?',
-                     default=2,
+                     const=2,
                      required=False)
 
 parser.add_argument('--forest_fires_column',
                      type=int,
-                     help='The index of column holding the CO2 emissions from forest fires in the file',
+                     help='The index of column holding the CO2 emissions from forest fires in the file (defaults to 3)',
                      nargs='?',
-                     default=3,
+                     const=3,
                      required=False)
 
 parser.add_argument('--organic_soil_fires_column',
                      type=int,
-                     help='The index of column holding the CO2 emissions from organic soil fires in the file',
+                     help='The index of column holding the CO2 emissions from organic soil fires in the file (defaults to 22)',
                      nargs='?',
                      const=22,
                      required=False)
 
 parser.add_argument('--humid_tropical_forest_fires_column',
                      type=int,
-                     help='The index of column holding the CO2 emissions from humid tropical forest fires in the file',
+                     help='The index of column holding the CO2 emissions from humid tropical forest fires in the file (defaults to 23)',
                      nargs='?',
-                     default=23,
+                     const=23,
                      required=False)
 
 args = parser.parse_args()
@@ -82,6 +82,10 @@ def main():
     
     # file_name = 'Agrofood_co2_emission.csv'
     file_name = args.file_name
+    
+    print(f"{country != None and file_name != None}")
+    
+    print(f"{savannah_fires_column = }")
     
     savannah_fires_list = my_utils.get_column(file_name, 
                                                       country_column, 

@@ -1,3 +1,39 @@
+def string_to_float(string):
+    """converts a string to a float
+    
+    Parameters
+    ----------
+    string : the string to convert
+    
+    Returns
+    -------
+    float
+        the string converted to a float
+    """
+    try:
+        return float(string)
+    except ValueError:
+        print(f"Error: {string} is not a number")
+        raise
+
+def float_to_int(float):
+    """converts a float to an int
+    
+    Parameters
+    ----------
+    float : the float to convert
+    
+    Returns
+    -------
+    int
+        the float converted to an int
+    """
+    try:
+        return int(float)
+    except ValueError:
+        print(f"Error: {float} is not a number")
+        raise
+    
 def get_column(file_name, query_column, query_value, result_column=1):
     """extracts a target (result) column of data from a CSV file based on 
     a query value in a query column
@@ -35,40 +71,4 @@ def get_column(file_name, query_column, query_value, result_column=1):
         raise
     except PermissionError:
         print(f"Error: Permission denied for file {file_name}")
-        raise
-    
-def string_to_float(string):
-    """converts a string to a float
-    
-    Parameters
-    ----------
-    string : the string to convert
-    
-    Returns
-    -------
-    float
-        the string converted to a float
-    """
-    try:
-        return float(string)
-    except ValueError:
-        print(f"Error: {string} is not a number")
-        raise
-
-def float_to_int(float):
-    """converts a float to an int
-    
-    Parameters
-    ----------
-    float : the float to convert
-    
-    Returns
-    -------
-    int
-        the float converted to an int
-    """
-    try:
-        return int(float)
-    except ValueError:
-        print(f"Error: {float} is not a number")
         raise
