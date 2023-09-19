@@ -142,8 +142,8 @@ def main():
     except IndexError:
         print("Error: No fire sources specified for the given country Please specify source(s) or use the --all_fires flag")
         raise
-    
-    print(f"There was a total of {total_fires} kilotons of CO2 emissions from {fire_sources_string} fires in {country} from {minimum_year} to {maximum_year}")
+    finally:
+        print(f"There was a total of {total_fires} kilotons of CO2 emissions from {fire_sources_string} fires in {country} from {minimum_year} to {maximum_year}")
 
 if __name__ == '__main__':
     main()
