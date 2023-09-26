@@ -9,7 +9,7 @@ Clone the GitHub Repository and run the following command in the terminal:
 ```bash
 $ bash run.sh
 ```
-This will print the total emissions from forest fires in the US for the range of data provided in the data source
+This will print the total emissions from forest fires in the US for the range of data provided in the data source. The bash script has 4 working commands, and 2 commands that should throw an error to test the error handling.
 
 ## Usage of `print_fires.py`
 The data source provided can be passed in several ways - unique fire sources can be specified, or all types of fires (savannah, forest, organic soil and humid tropical forest fires).
