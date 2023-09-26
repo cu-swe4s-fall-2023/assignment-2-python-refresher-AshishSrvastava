@@ -35,6 +35,7 @@ parser.add_argument('--all_fires',
                     help='To include all fire sources (savannah, forest, organic soil, humid tropical forest) in the total CO2 emissions from fires',
                     nargs='?',
                     const=True,
+                    required=False
                     )
 
 parser.add_argument('--savannah_fires_column',
