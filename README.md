@@ -3,13 +3,15 @@
 My submission for the Python Refresher Assignment (Assignment 2)
 
 The goal was to use good practices to create a project that would calculate the total $CO_2$ emissions from fires in the US (which could be extended to any other statistic in the dataset for any other country)
-
+$$
 ## Installation and Usage
 Clone the GitHub Repository and run the following command in the terminal:
 ```bash
 $ bash run.sh
 ```
-This will print the total emissions from forest fires in the US for the range of data provided in the data source. The bash script has 4 working commands, and 2 commands that should throw an error to test the error handling.
+This will print the total emissions from forest fires in the US for the range of data provided in the data source. The bash script has 4 working$$
+
+$$ commands, and 2 commands that should throw an error to test the error handling.
 
 ## Usage of `print_fires.py`
 The data source provided can be passed in several ways - unique fire sources can be specified, or all types of fires (savannah, forest, organic soil and humid tropical forest fires).
@@ -45,4 +47,6 @@ python print_fires.py --country 'United States of America' --file_name 'Agrofood
 
 
 ## Data Source
-The data source was the provided `Agrofood_co2_emission.csv` file. This datafile provides information on Carbon Dioxide emissions by country and year. The level of $CO_2$ emissions are given in units of [kilotons]
+The data source was the provided `Agrofood_co2_emission.csv` file. This datafile provides information on Carbon Dioxide emissions by country and year. The level of $CO_2$ emissions are given in units of [kilotons].
+
+In order to ensure proper functionality, please place the data file in the same directory as the `print_fires.py` file.
