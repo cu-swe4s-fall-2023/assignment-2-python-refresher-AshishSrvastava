@@ -56,6 +56,12 @@ python print_fires.py --country 'United States of America' --file_name 'Agrofood
 python print_fires.py --country 'United States of America' --file_name 'Agrofood_co2_emission.csv' --savannah_fires_column --forest_fires_column
 ```
 
+### Calculating the median of the emissions from each fire source in the specified country
+```bash
+python print_fires.py --country 'United States of America' --file_name 'Agrofood_co2_emission.csv' --all_fires --mean True
+```
+
+The above command can also be replaced with `--median` or `--stdev` for the median and standard deviation respectively 
 
 ## Data Source
 The data source was the provided `Agrofood_co2_emission.csv` file. This datafile provides information on Carbon Dioxide emissions by country and year. The level of $CO_2$ emissions are given in units of [kilotons].
