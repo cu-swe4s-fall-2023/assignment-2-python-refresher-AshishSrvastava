@@ -182,7 +182,10 @@ def main():
     
     
     try:
-        fire_sources_string = ", ".join(fire_sources[:-1]) + " and " + fire_sources[-1]
+        if len(fire_sources) == 1:
+            fire_sources_string = fire_sources[0]
+        else:
+            fire_sources_string = ", ".join(fire_sources[:-1]) + " and " + fire_sources[-1]
     except IndexError:
         print("Error: No fire sources specified for the given country Please specify source(s) or use the --all_fires flag")
         raise
