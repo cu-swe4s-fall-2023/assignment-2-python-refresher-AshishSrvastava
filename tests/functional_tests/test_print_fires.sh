@@ -27,6 +27,15 @@ assert_exit_code 1
 run no_sources_specified python ../../src/print_fires.py --country 'United States of America' --file_name 'test_Agrofood_co2_emission.csv'
 assert_exit_code 1
 
+run country_mean python ../../src/print_fires.py --country 'United States of America' --file_name 'test_Agrofood_co2_emission.csv' --all_fires --mean True
+assert_exit_code 0
+
+run country_median python ../../src/print_fires.py --country 'United States of America' --file_name 'test_Agrofood_co2_emission.csv' --all_fires --median True
+assert_exit_code 0
+
+run country_stdev python ../../src/print_fires.py --country 'United States of America' --file_name 'test_Agrofood_co2_emission.csv' --all_fires --stdev True
+assert_exit_code 0
+
 run array_mean python array_operations.py mean 1,2,3,4,5
 assert_in_stdout 3.0
 assert_exit_code 0
