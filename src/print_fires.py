@@ -191,15 +191,23 @@ def main():
         raise
     finally:
         if calculate_mean:
-            print(f"{calculate_mean=}")
             for fire_source, fire_list in fire_lists_dict.items():
-                print(f"The mean of the CO2 emissions from {fire_source} fires is {my_utils.array_mean(fire_list)} kilotons")
+                if fire_list == []:
+                    pass
+                else:
+                    print(f"The mean of the CO2 emissions from {fire_source} fires is {my_utils.array_mean(fire_list)} kilotons")
         elif calculate_median:
             for fire_source, fire_list in fire_lists_dict.items():
-                print(f"The median of the CO2 emissions from {fire_source} fires is {my_utils.array_median(fire_list)} kilotons")
+                if fire_list == []:
+                    pass
+                else:
+                    print(f"The median of the CO2 emissions from {fire_source} fires is {my_utils.array_median(fire_list)} kilotons")
         elif calculate_stdev:
             for fire_source, fire_list in fire_lists_dict.items():
-                print(f"The standard deviation of the CO2 emissions from {fire_source} fires is {my_utils.array_stdev(fire_list)} kilotons")
+                if fire_list == []:
+                    pass
+                else:
+                    print(f"The standard deviation of the CO2 emissions from {fire_source} fires is {my_utils.array_stdev(fire_list)} kilotons")
         else:
             print(f"There was a total of {total_fires} kilotons of CO2 emissions from {fire_sources_string} fires in {country} from {minimum_year} to {maximum_year}")
 
