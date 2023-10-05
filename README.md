@@ -31,11 +31,11 @@ optional arguments (at least one source must be specified)
 
 --humid_tropical_forest_fires_column        Column number for humid tropical forest fires (default 23)
 
---mean                                      Calculate the mean of the emissions from the specified country
+--mean                                      Calculate the mean of the emissions from the specified country (default False)
 
---median                                    Calculate the median of the emissions from the specified country    
+--median                                    Calculate the median of the emissions from the specified country (default False)  
 
---stdev                                     Calculate the standard deviation of the emissions from the specified country
+--stdev                                     Calculate the standard deviation of the emissions from the specified country (default False)
 
 ```
 
