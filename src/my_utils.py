@@ -10,7 +10,13 @@ def array_mean(array):
     float
         the mean of the array
     """
-    return sum(array) / len(array)
+    try:
+        if not isinstance(array, list):
+            raise TypeError("Error: array_mean() expects a list")
+        return sum(array) / len(array)
+    except ZeroDivisionError:
+        raise ValueError("Error: array_mean() expects a non-empty list")
+
 
 def array_median(array):
     """Calculates the median of an array of numbers
@@ -24,7 +30,16 @@ def array_median(array):
     float
         the median of the array
     """
-    return sorted(array)[len(array) // 2]
+    try:
+        sorted_array = sorted(array)
+        if len(sorted_array) % 2 == 1:
+            return sorted_array[len(sorted_array) // 2]
+        else:
+            m1 = sorted_array[len(sorted_array) // 2 - 1]
+            m2 = sorted_array[len(sorted_array) // 2]
+            return (m1 + m2) / 2
+    except TypeError:
+        raise TypeError("Error: array_median() expects a list of numbers")
 
 def array_variance(array):
     """Calculates the variance of an array of numbers
@@ -38,8 +53,11 @@ def array_variance(array):
     float
         the variance of the array
     """
-    mean = array_mean(array)
-    return sum([(i - mean) ** 2 for i in array]) / len(array)
+    try:
+        mean = array_mean(array)
+        return sum([(i - mean) ** 2 for i in array]) / len(array)
+    except TypeError:
+        raise TypeError("Error: array_variance() expects a list of numbers")
 
 def array_stdev(array):
     """Calculates the standard deviation of an array of numbers
@@ -53,8 +71,10 @@ def array_stdev(array):
     float
         the standard deviation of the array
     """
-    return array_variance(array) ** 0.5
-    
+    try:
+        return array_variance(array) ** 0.5
+    except TypeError:
+        raise TypeError("Error: array_stdev() expects a list of numbers")
 
 def string_to_float(string):
     """converts a string to a float
@@ -70,7 +90,7 @@ def string_to_float(string):
     """
     try:
         return float(string)
-    except ValueError:
+    except TypeError:
         print(f"Error: {string} is not a number")
         raise
 

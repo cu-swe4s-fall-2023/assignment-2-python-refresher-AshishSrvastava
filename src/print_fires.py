@@ -1,5 +1,5 @@
 import argparse
-import src.my_utils as my_utils
+import my_utils 
 
 
 parser = argparse.ArgumentParser(
@@ -35,6 +35,30 @@ parser.add_argument('--all_fires',
                     help='To include all fire sources (savannah, forest, organic soil, humid tropical forest) in the total CO2 emissions from fires',
                     nargs='?',
                     const=True,
+                    required=False
+                    )
+
+parser.add_argument('--mean',
+                    type=bool,
+                    help='To calculate the mean of the CO2 emissions from the specified fire sources',
+                    nargs='?',
+                    default=False,
+                    required=False
+                    )
+
+parser.add_argument('--median',
+                    type=bool,
+                    help='To calculate the median of the CO2 emissions from the specified fire sources',
+                    nargs='?',
+                    default=False,
+                    required=False
+                    )
+
+parser.add_argument('--stdev',
+                    type=bool,
+                    help='To calculate the standard deviation of the CO2 emissions from the specified fire sources',
+                    nargs='?',
+                    default=False,
                     required=False
                     )
 
@@ -80,6 +104,11 @@ def main():
     humid_tropical_forest_fires_column = args.humid_tropical_forest_fires_column
     file_name = args.file_name
     all_fires = args.all_fires 
+    calculate_mean = args.mean
+    calculate_median = args.median
+    calculate_stdev = args.stdev
+    
+    
     
     # Handle default values for fire source columns if --all_fires is used
     if all_fires:
@@ -93,8 +122,11 @@ def main():
             humid_tropical_forest_fires_column = 23
     
     # accumulators
-    total_fires = 0
     fire_sources = []
+    fire_lists_dict = {"savannah": [],
+                  "forest": [],
+                  "organic soil": [],
+                  "humid tropical forest": [],}
     
     # Get the time range for when fires ocurred
     years_with_fires_string_list = my_utils.get_column(file_name, 
@@ -110,41 +142,74 @@ def main():
                                                         country_column, 
                                                         country, 
                                                         result_column=savannah_fires_column)
-        total_fires += sum(savannah_fires_list)
         fire_sources.append("savannah")
+        fire_lists_dict['savannah'] = savannah_fires_list
     
     if forest_fires_column != None or all_fires == True:
         forest_fires_list = my_utils.get_column(file_name, 
                                                    country_column, 
                                                    country, 
                                                    result_column=forest_fires_column)
-        total_fires += sum(forest_fires_list)
         fire_sources.append("forest")
+        fire_lists_dict['forest'] = forest_fires_list
 
     if organic_soil_fires_column != None or all_fires == True:
         organic_soil_fires_list = my_utils.get_column(file_name, 
                                                            country_column, 
                                                            country, 
                                                            result_column=organic_soil_fires_column)
-        total_fires += sum(organic_soil_fires_list)
         fire_sources.append("organic soil")
+        fire_lists_dict['organic soil'] = organic_soil_fires_list
         
     if humid_tropical_forest_fires_column != None or all_fires == True:
         humid_tropical_forest_fires_list = my_utils.get_column(file_name, 
                                                                    country_column, 
                                                                    country, 
                                                                    result_column=humid_tropical_forest_fires_column)
-        total_fires += sum(humid_tropical_forest_fires_list)
         fire_sources.append("humid tropical forest")
-        
+        fire_lists_dict['humid tropical forest'] = humid_tropical_forest_fires_list
+    
+
+
+    elif calculate_median:
+        for fire_list in fire_lists_dict.values():
+            print(f"The median of the CO2 emissions from fires is {my_utils.array_median(fire_list)} kilotons")
+    
+    # Calculate the total CO2 emissions from fires
+    total_fires = 0
+    for fire_list in fire_lists_dict.values():
+        total_fires += sum(fire_list)
+    
     
     try:
-        fire_sources_string = ", ".join(fire_sources[:-1]) + " and " + fire_sources[-1]
+        if len(fire_sources) == 1:
+            fire_sources_string = fire_sources[0]
+        else:
+            fire_sources_string = ", ".join(fire_sources[:-1]) + " and " + fire_sources[-1]
     except IndexError:
         print("Error: No fire sources specified for the given country Please specify source(s) or use the --all_fires flag")
         raise
     finally:
-        print(f"There was a total of {total_fires} kilotons of CO2 emissions from {fire_sources_string} fires in {country} from {minimum_year} to {maximum_year}")
+        if calculate_mean:
+            for fire_source, fire_list in fire_lists_dict.items():
+                if fire_list == []:
+                    pass
+                else:
+                    print(f"The mean of the CO2 emissions from {fire_source} fires is {my_utils.array_mean(fire_list)} kilotons")
+        elif calculate_median:
+            for fire_source, fire_list in fire_lists_dict.items():
+                if fire_list == []:
+                    pass
+                else:
+                    print(f"The median of the CO2 emissions from {fire_source} fires is {my_utils.array_median(fire_list)} kilotons")
+        elif calculate_stdev:
+            for fire_source, fire_list in fire_lists_dict.items():
+                if fire_list == []:
+                    pass
+                else:
+                    print(f"The standard deviation of the CO2 emissions from {fire_source} fires is {my_utils.array_stdev(fire_list)} kilotons")
+        else:
+            print(f"There was a total of {total_fires} kilotons of CO2 emissions from {fire_sources_string} fires in {country} from {minimum_year} to {maximum_year}")
 
 if __name__ == '__main__':
     main()
