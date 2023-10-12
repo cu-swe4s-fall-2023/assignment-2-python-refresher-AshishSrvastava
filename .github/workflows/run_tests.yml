@@ -45,4 +45,4 @@ jobs:
       - run: |
           python -m unittest tests/unit_tests/test_my_utils.py  
           cd tests/ 
-          bash test_search.sh
+          bash test_print_fires.sh
