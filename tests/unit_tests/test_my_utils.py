@@ -64,7 +64,7 @@ class TestMyUtils(unittest.TestCase):
     def test_string_to_float(self):
         input_string = "15.3"
         expected_float = 15.3
-        self.assertEqual(my_utils.string_to_float(input_string), 
+        self.assertEqual(my_utils.string_to_float(input_string),
                          expected_float)
 
     def test_float_to_int(self):
