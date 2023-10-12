@@ -1,0 +1,44 @@
+name: CI tests
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:  
+  run_unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          python -m unittest tests/unit_tests/test_my_utils.py    
+          
+  run_functional_tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}  
+    steps:
+      - uses: actions/checkout@v2
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          environment-file: environment.yml
+          activate-environment: swe4s
+      - run: |
+          cd tests/functional_tests
+          bash test_print_fires.sh
+          
+  run_all_tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: mamba-org/setup-micromamba@v1
+        with:
+          environment-file: environment.yml
+          environment-name: swe4s
+      - run: |
+          python -m unittest tests/unit_tests/test_my_utils.py  
+          cd tests/functional_tests 
+          bash test_print_fires.sh
