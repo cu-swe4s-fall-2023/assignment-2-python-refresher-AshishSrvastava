@@ -4,8 +4,7 @@ run-name: ${{ github.actor }} is running GitHub Actions CI tests for assignment 
 on:
   pull_request:
     branches: [ main ]
-  push: 
-    branches: [ * ]
+
 
 jobs:  
   run_unit_tests:
