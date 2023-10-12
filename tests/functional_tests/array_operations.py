@@ -1,5 +1,5 @@
 import sys
-sys.path.append("../../src")
+sys.path.append("../../src") #noqa
 import my_utils
 
 op = sys.argv[1]

@@ -35,7 +35,8 @@ class TestMyUtils(unittest.TestCase):
     def test_array_variance(self):
         input_array = [1, 2, 3]
         expected_variance = 2 / 3
-        self.assertEqual(my_utils.array_variance(input_array), expected_variance)
+        self.assertEqual(my_utils.array_variance(input_array),
+                         expected_variance)
 
     def test_string_variance(self):
         input_non_array = "not an array"
@@ -63,7 +64,8 @@ class TestMyUtils(unittest.TestCase):
     def test_string_to_float(self):
         input_string = "15.3"
         expected_float = 15.3
-        self.assertEqual(my_utils.string_to_float(input_string), expected_float)
+        self.assertEqual(my_utils.string_to_float(input_string), 
+                         expected_float)
 
     def test_float_to_int(self):
         input_float = 15.0
