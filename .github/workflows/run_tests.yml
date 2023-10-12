@@ -40,5 +40,5 @@ jobs:
           environment-name: swe4s
       - run: |
           python -m unittest tests/unit_tests/test_my_utils.py  
-          cd tests/functional_tests 
-          bash test_print_fires.sh
+          cd tests/ 
+          bash test_search.sh
