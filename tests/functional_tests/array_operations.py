@@ -1,7 +1,7 @@
 import sys
+import my_utils
 
 sys.path.append("../../src")
-import my_utils
 
 op = sys.argv[1]
 str_arr = sys.argv[2].split(",")
