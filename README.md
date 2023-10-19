@@ -50,6 +50,12 @@ optional arguments (at least one source must be specified)
 
 --stdev                                     Calculate the standard deviation of the emissions from the specified country (default False)
 
+--output_file OUTPUT_FILE                   Save the time series data to a file with the specified name (e.g., 'Country.txt') (default None)
+```
+
+To save the time series data to a file, use the --output_file flag followed by the desired file name. For example:
+```bash
+python print_fires.py --country 'United States of America' --file_name 'Agrofood_co2_emission.csv' --all_fires True --output_file 'United States of America.txt'
 ```
 
 Note that a fire source (either a combination of specific sources or `--all_fires`) will need to be specified.

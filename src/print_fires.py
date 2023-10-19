@@ -19,6 +19,13 @@ parser.add_argument(
 )
 
 parser.add_argument(
+    "--output_file",
+    type=str,
+    help="The name of the file to write the plot to",
+    default=None,
+)
+
+parser.add_argument(
     "--country",
     type=str,
     help="The country to collect the CO2 emissions from fires for",
@@ -154,6 +161,7 @@ def main():
         args.humid_tropical_forest_fires_column
     )
     file_name = args.file_name
+    output_file = args.output_file
     all_fires = args.all_fires
     calculate_mean = args.mean
     calculate_median = args.median
@@ -183,6 +191,7 @@ def main():
     years_with_fires_string_list = my_utils.get_column(
         file_name, country_column, country, result_column=year_column
     )
+
     minimum_year = min(years_with_fires_string_list)
     maximum_year = max(years_with_fires_string_list)
 
@@ -238,6 +247,7 @@ def main():
 
     # Calculate the total CO2 emissions from fires
     total_fires = 0
+    print(f"{fire_lists_dict=}")
     for fire_list in fire_lists_dict.values():
         total_fires += sum(fire_list)
 
@@ -291,6 +301,18 @@ def main():
                 f" from {fire_sources_string} fires in {country} from"
                 f" {minimum_year} to {maximum_year}"
             )
+        
+        # Optional: write the total CO2 emissions from fires to a file
+        if output_file:
+            with open(output_file, "w") as f:
+                f.write(f"Year,Total CO2 Emissions\n")
+                for year in range(minimum_year, maximum_year + 1):
+                    total_emissions_year = sum(
+                        fire_lists_dict[fire_source][year - minimum_year]
+                        for fire_source in fire_sources
+                    )
+                    f.write(f"{year},{total_emissions_year}\n")
+            print(f"Time series data saved to {args.output_file}")
 
 
 if __name__ == "__main__":
