@@ -1,0 +1,36 @@
+def read_countries(file_name):
+    countries = []
+    with open(file_name, 'r') as file:
+        for line in file:
+            countries.append(line.strip())
+    return countries
+# COUNTRIES = ['Afghanistan']
+# COUNTRY = 'Afghanistan'
+
+rule all:
+    input:
+        expand('{country}_fires_time_series.png', country=read_countries('countries.txt'))
+        
+
+    
+rule download_data:
+    output:
+        'Agrofood_co2_emission.csv'
+    shell:
+        "wget https://raw.githubusercontent.com/ashishsrvstv/assignment-2-python-refresher-AshishSrvastava/master/data/Agrofood_co2_emission.csv"
+
+rule country_fire_counts:
+    input:
+        'Agrofood_co2_emission.csv'
+    output:
+        '{x}.txt'
+    shell:
+        "python print_fires.py --country '{wildcards.x}' --file_name '{input}' --all_fires True --output_file '{output}'"
+
+rule plot_co2_time_series:
+    input: 
+        '{w}.txt'
+    output:
+         '{w}_fires_time_series.png'
+    shell:
+        "python plot_time_series.py '{input}' '{output}' 'CO2 emissions from fires in {wildcards.w}' 'Year' 'CO2 emissions (kt)'"
