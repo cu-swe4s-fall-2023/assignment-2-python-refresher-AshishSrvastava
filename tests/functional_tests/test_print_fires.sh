@@ -47,3 +47,7 @@ assert_exit_code 0
 run array_stdev python array_operations.py stdev 1,2,3,4,5
 assert_in_stdout 1.4142135623730951
 assert_exit_code 0
+
+assert_equal ../../doc/Afghanistan.png ( ls ../../doc/Afghanistan.png )
+assert_equal ../../doc/India.png ( ls ../../doc/India.png )
+assert_equal ../../doc/US.png ( ls ../../doc/US.png )
