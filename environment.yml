@@ -1,6 +1,7 @@
 name: swe4s
 channels:
   - conda-forge
+  - bioconda
 dependencies:
   - numpy
   - pycodestyle
