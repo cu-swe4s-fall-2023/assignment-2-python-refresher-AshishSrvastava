@@ -9,9 +9,13 @@ The goal was to use good practices to create a project that would calculate the 
 From the data description:
 
 ```
-The agricultural CO2 emission dataset has been constructed by merging and reprocessing approximately a dozen individual datasets from the Food and Agriculture Organization (FAO) and data from IPCC. These datasets were, cleaned, preprocessed and merged together to create a comprehensive and cohesive dataset for analysis and forecasting purposes. 
+The agricultural CO2 emission dataset has been constructed by merging and reprocessing approximately
+a dozen individual datasets from the Food and Agriculture Organization (FAO) and data from IPCC.
+These datasets were, cleaned, preprocessed and merged together to create a comprehensive and cohesive
+dataset for analysis and forecasting purposes. 
 
-The dataset, as demonstrated in the notebook, describes CO2 emissions related to agri-food, which amount to approximately 62% of the global annual emissions.
+The dataset, as demonstrated in the notebook, describes CO2 emissions related to agri-food,
+which amount to approximately 62% of the global annual emissions.
 ```
 
 # Results
