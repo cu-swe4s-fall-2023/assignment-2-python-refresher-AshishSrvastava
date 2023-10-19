@@ -1,7 +1,8 @@
 import sys
 import numpy as np
 import matplotlib
-matplotlib.use('Agg')
+
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # Check if the required arguments are provided
@@ -19,21 +20,21 @@ y_label = sys.argv[5]
 x_data = []  # X-axis data
 y_data = []  # Y-axis data
 
-with open(data_file, 'r') as file:
+with open(data_file, "r") as file:
     next(file)  # Skip the header line
     for line in file:
-        x, y = line.strip().split(',')
+        x, y = line.strip().split(",")
         x_data.append(float(x))
         y_data.append(float(y))
 
 # Create a time series plot
 fig, ax = plt.subplots()
-ax.plot(x_data, y_data, marker='o', linestyle='-')
+ax.plot(x_data, y_data, marker="o", linestyle="-")
 
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
+ax.spines["top"].set_visible(False)
+ax.spines["right"].set_visible(False)
 ax.set_xlabel(x_label)
 ax.set_ylabel(y_label)
 ax.set_title(title)
 
-plt.savefig(out_file, bbox_inches='tight')
+plt.savefig(out_file, bbox_inches="tight")
