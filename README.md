@@ -1,9 +1,22 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/oQi7O4AA)
 # python-refresher
+
+# Introduction
 My submission for the Python Refresher Assignment (Assignment 2)
 
-The goal was to use good practices to create a project that would calculate the total $CO_2$ emissions from fires in the US (which could be extended to any other statistic in the dataset for any other country)
+The goal was to use good practices to create a project that would calculate the total $CO_2$ emissions from fires in the US (which could be extended to any other statistic in the dataset for any other country). For this project, we use the "Agrofood_co2_emission.csv" file provided in the assignment.
 
+From the data description:
+
+```
+The agricultural CO2 emission dataset has been constructed by merging and reprocessing approximately a dozen individual datasets from the Food and Agriculture Organization (FAO) and data from IPCC. These datasets were, cleaned, preprocessed and merged together to create a comprehensive and cohesive dataset for analysis and forecasting purposes. 
+
+The dataset, as demonstrated in the notebook, describes CO2 emissions related to agri-food, which amount to approximately 62% of the global annual emissions.
+```
+
+# Results
+
+# Code
 ## Installation and Usage
 Clone the GitHub Repository and run the following command in the terminal:
 ```bash
