@@ -66,7 +66,8 @@ parser.add_argument(
     "--mean",
     type=bool,
     help=(
-        "To calculate the mean of the CO2 emissions from the specified fire" " sources"
+        "To calculate the mean of the CO2 emissions from the specified fire"
+        " sources"
     ),
     nargs="?",
     default=False,
@@ -156,7 +157,9 @@ def main():
     savannah_fires_column = args.savannah_fires_column
     forest_fires_column = args.forest_fires_column
     organic_soil_fires_column = args.organic_soil_fires_column
-    humid_tropical_forest_fires_column = args.humid_tropical_forest_fires_column
+    humid_tropical_forest_fires_column = (
+        args.humid_tropical_forest_fires_column
+    )
     file_name = args.file_name
     output_file = args.output_file
     all_fires = args.all_fires
@@ -231,7 +234,9 @@ def main():
             result_column=humid_tropical_forest_fires_column,
         )
         fire_sources.append("humid tropical forest")
-        fire_lists_dict["humid tropical forest"] = humid_tropical_forest_fires_list
+        fire_lists_dict[
+            "humid tropical forest"
+        ] = humid_tropical_forest_fires_list
 
     elif calculate_median:
         for fire_list in fire_lists_dict.values():
