@@ -1,14 +1,15 @@
 import sys
 import numpy as np
 import matplotlib
+import matplotlib.pyplot as plt
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
 # Check if the required arguments are provided
 if len(sys.argv) != 6:
     print(
-        "Usage: python plot_time_series.py data_file out_file title x_label y_label"
+        "Usage: python plot_time_series.py data_file out_file\
+         title x_label y_label"
     )
     sys.exit(1)
 
