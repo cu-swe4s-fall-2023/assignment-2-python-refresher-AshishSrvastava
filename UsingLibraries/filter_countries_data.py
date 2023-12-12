@@ -24,7 +24,8 @@ def filter_gdp_data_countries(input_file, output_file, countries):
     )
     all_countries_gdp_df["Year"] = all_countries_gdp_df["Year"].astype(int)
 
-    # Convert GDP from string to float, handling non-numeric characters like commas
+    # Convert GDP from string to float
+    # handle non-numeric characters (commas)
     all_countries_gdp_df["GDP"] = pd.to_numeric(
         all_countries_gdp_df["GDP"].str.replace(",", ""), errors="coerce"
     )
@@ -34,7 +35,8 @@ def filter_gdp_data_countries(input_file, output_file, countries):
         all_countries_gdp_df["Country"].isin(countries)
     ]
 
-    # Standardize country name for United States to match with Agrofood_co2_emission.csv
+    # Standardize country name for United States 
+    # to match with Agrofood_co2_emission.csv
     filtered_countries_gdp_df["Country"] = filtered_countries_gdp_df[
         "Country"
     ].replace("United States", "United States of America")
