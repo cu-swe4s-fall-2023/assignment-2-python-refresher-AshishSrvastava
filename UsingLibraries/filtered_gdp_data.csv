@@ -1,0 +1,293 @@
+Country,Year,GDP
+Canada,1950,
+Guatemala,1950,
+Mexico,1950,
+United States of America,1950,299827.3
+Canada,1951,
+Guatemala,1951,
+Mexico,1951,
+United States of America,1951,346913.3
+Canada,1952,
+Guatemala,1952,
+Mexico,1952,
+United States of America,1952,367340.8
+Canada,1953,
+Guatemala,1953,
+Mexico,1953,
+United States of America,1953,389217.5
+Canada,1954,
+Guatemala,1954,
+Mexico,1954,
+United States of America,1954,390549.0
+Canada,1955,
+Guatemala,1955,
+Mexico,1955,
+United States of America,1955,425479.5
+Canada,1956,
+Guatemala,1956,
+Mexico,1956,
+United States of America,1956,449352.5
+Canada,1957,
+Guatemala,1957,
+Mexico,1957,
+United States of America,1957,474039.5
+Canada,1958,
+Guatemala,1958,
+Mexico,1958,
+United States of America,1958,481228.5
+Canada,1959,
+Guatemala,1959,
+Mexico,1959,
+United States of America,1959,521654.3
+Canada,1960,
+Guatemala,1960,
+Mexico,1960,
+United States of America,1960,542382.3
+Canada,1961,42099.0
+Guatemala,1961,
+Mexico,1961,
+United States of America,1961,562209.8
+Canada,1962,45816.0
+Guatemala,1962,
+Mexico,1962,
+United States of America,1962,603921.5
+Canada,1963,49302.0
+Guatemala,1963,
+Mexico,1963,
+United States of America,1963,637451.5
+Canada,1964,54068.0
+Guatemala,1964,
+Mexico,1964,
+United States of America,1964,684461.5
+Canada,1965,59659.0
+Guatemala,1965,
+Mexico,1965,
+United States of America,1965,742290.3
+Canada,1966,66809.0
+Guatemala,1966,
+Mexico,1966,
+United States of America,1966,813413.8
+Canada,1967,71913.0
+Guatemala,1967,
+Mexico,1967,
+United States of America,1967,859956.3
+Canada,1968,78569.0
+Guatemala,1968,
+Mexico,1968,
+United States of America,1968,940646.5
+Canada,1969,86518.0
+Guatemala,1969,
+Mexico,1969,
+United States of America,1969,1017615.0
+Canada,1970,93237.0
+Guatemala,1970,
+Mexico,1970,
+United States of America,1970,1073310.5
+Canada,1971,101767.0
+Guatemala,1971,
+Mexico,1971,
+United States of America,1971,1164849.8
+Canada,1972,113625.0
+Guatemala,1972,
+Mexico,1972,
+United States of America,1972,1279112.0
+Canada,1973,133080.0
+Guatemala,1973,
+Mexico,1973,
+United States of America,1973,1425376.0
+Canada,1974,158306.0
+Guatemala,1974,
+Mexico,1974,
+United States of America,1974,1545242.5
+Canada,1975,178045.0
+Guatemala,1975,
+Mexico,1975,
+United States of America,1975,1684905.0
+Canada,1976,206007.0
+Guatemala,1976,
+Mexico,1976,
+United States of America,1976,1873412.5
+Canada,1977,227579.0
+Guatemala,1977,
+Mexico,1977,
+United States of America,1977,2081825.0
+Canada,1978,252044.0
+Guatemala,1978,
+Mexico,1978,
+United States of America,1978,2351598.8
+Canada,1979,287574.0
+Guatemala,1979,
+Mexico,1979,
+United States of America,1979,2627326.3
+Canada,1980,322748.0
+Guatemala,1980,
+Mexico,1980,
+United States of America,1980,2857308.5
+Canada,1981,368358.0
+Guatemala,1981,
+Mexico,1981,
+United States of America,1981,3207041.3
+Canada,1982,388181.0
+Guatemala,1982,
+Mexico,1982,
+United States of America,1982,3343789.3
+Canada,1983,421316.0
+Guatemala,1983,
+Mexico,1983,
+United States of America,1983,3634036.5
+Canada,1984,461986.0
+Guatemala,1984,
+Mexico,1984,
+United States of America,1984,4037614.0
+Canada,1985,500027.0
+Guatemala,1985,
+Mexico,1985,
+United States of America,1985,4338980.5
+Canada,1986,526630.0
+Guatemala,1986,
+Mexico,1986,
+United States of America,1986,4579632.5
+Canada,1987,574336.0
+Guatemala,1987,
+Mexico,1987,
+United States of America,1987,4855216.3
+Canada,1988,626894.0
+Guatemala,1988,
+Mexico,1988,
+United States of America,1988,5236438.0
+Canada,1989,671579.0
+Guatemala,1989,
+Mexico,1989,
+United States of America,1989,5641579.5
+Canada,1990,695501.0
+Guatemala,1990,
+Mexico,1990,
+United States of America,1990,5963144.5
+Canada,1991,701773.0
+Guatemala,1991,
+Mexico,1991,
+United States of America,1991,6158129.3
+Canada,1992,718436.0
+Guatemala,1992,
+Mexico,1992,
+United States of America,1992,6520327.3
+Canada,1993,747037.0
+Guatemala,1993,
+Mexico,1993,1651777.9
+United States of America,1993,6858558.5
+Canada,1994,791972.0
+Guatemala,1994,
+Mexico,1994,1868526.4
+United States of America,1994,7287236.5
+Canada,1995,831621.0
+Guatemala,1995,
+Mexico,1995,2440392.4
+United States of America,1995,7639749.3
+Canada,1996,859834.0
+Guatemala,1996,
+Mexico,1996,3284161.8
+United States of America,1996,8073121.8
+Canada,1997,906926.0
+Guatemala,1997,
+Mexico,1997,4144914.2
+United States of America,1997,8577552.5
+Canada,1998,940548.0
+Guatemala,1998,
+Mexico,1998,5092988.0
+United States of America,1998,9062816.8
+Canada,1999,1007927.0
+Guatemala,1999,
+Mexico,1999,6034995.1
+United States of America,1999,9631171.8
+Canada,2000,1106071.0
+Guatemala,2000,
+Mexico,2000,7016603.9
+United States of America,2000,10250952.0
+Canada,2001,1144543.0
+Guatemala,2001,
+Mexico,2001,7437107.7
+United States of America,2001,10581929.0
+Canada,2002,1193694.0
+Guatemala,2002,
+Mexico,2002,7827758.0
+United States of America,2002,10929108.3
+Canada,2003,1254747.0
+Guatemala,2003,
+Mexico,2003,8259533.1
+United States of America,2003,11456449.5
+Canada,2004,1335731.0
+Guatemala,2004,
+Mexico,2004,9248389.8
+United States of America,2004,12217195.8
+Canada,2005,1421590.0
+Guatemala,2005,
+Mexico,2005,9999599.0
+United States of America,2005,13039197.0
+Canada,2006,1496604.0
+Guatemala,2006,
+Mexico,2006,11120115.8
+United States of America,2006,13815583.0
+Canada,2007,1577661.0
+Guatemala,2007,
+Mexico,2007,12046753.2
+United States of America,2007,14474227.0
+Canada,2008,1657041.0
+Guatemala,2008,
+Mexico,2008,12927761.3
+United States of America,2008,14769861.8
+Canada,2009,1571334.0
+Guatemala,2009,
+Mexico,2009,12749117.9
+United States of America,2009,14478067.3
+Canada,2010,1666048.0
+Guatemala,2010,
+Mexico,2010,13968149.5
+United States of America,2010,15048971.0
+Canada,2011,1774063.0
+Guatemala,2011,
+Mexico,2011,15268436.7
+United States of America,2011,15599731.5
+Canada,2012,1827201.0
+Guatemala,2012,
+Mexico,2012,16529124.0
+United States of America,2012,16253970.0
+Canada,2013,1902247.0
+Guatemala,2013,416383.22
+Mexico,2013,16954005.7
+United States of America,2013,16880683.3
+Canada,2014,1994898.0
+Guatemala,2014,447326.33
+Mexico,2014,18137650.6
+United States of America,2014,17608138.3
+Canada,2015,1990441.0
+Guatemala,2015,476022.82
+Mexico,2015,19228614.7
+United States of America,2015,18295019.0
+Canada,2016,2025535.0
+Guatemala,2016,502001.7
+Mexico,2016,20758790.5
+United States of America,2016,18804913.3
+Canada,2017,2140641.0
+Guatemala,2017,526507.41
+Mexico,2017,22536210.3
+United States of America,2017,19612102.5
+Canada,2018,2235675.0
+Guatemala,2018,551368.08
+Mexico,2018,24176670.4
+United States of America,2018,20656515.5
+Canada,2019,2313563.0
+Guatemala,2019,593972.02
+Mexico,2019,25143134.2
+United States of America,2019,21521395.0
+Canada,2020,2209681.0
+Guatemala,2020,600089.44
+Mexico,2020,24079804.3
+United States of America,2020,21322949.5
+Canada,2021,2509618.0
+Guatemala,2021,665567.94
+Mexico,2021,26608701.4
+United States of America,2021,23594030.8
+Canada,2022,2782645.0
+Guatemala,2022,736108.98
+Mexico,2022,29503758.3
+United States of America,2022,25744108.3

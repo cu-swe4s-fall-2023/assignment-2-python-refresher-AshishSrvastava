@@ -1,0 +1,22 @@
+rule all:
+    input:
+        "four_panel_plot.png"
+
+rule process_and_merge_data:
+    input:
+        emissions = "Agrofood_co2_emission.csv",
+        gdp = "IMF_GDP.csv"
+    output:
+        filtered_emissions = "filtered_emissions_data.csv",
+        filtered_gdp = "filtered_gdp_data.csv",
+        merged_data = "merged_data.csv"
+    shell:
+        "python filter_countries_data.py"
+
+rule plot_four_panel:
+    input:
+        merged_data = "merged_data.csv"
+    output:
+        four_panel_plot = "four_panel_plot.png"
+    shell:
+        "python plot_four_panel.py"
