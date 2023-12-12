@@ -64,7 +64,7 @@ ax3.set_ylabel("Total Emissions")
 ax3.set_title("C: GDP vs Total Emissions Colored by Year")
 fig.colorbar(sm, ax=ax3, label="Year")
 
-# Bottom Right (D): Bar Chart of 
+# Bottom Right (D): Bar Chart of
 # Average GDP vs Average Total Emissions for Each Country
 average_data = north_american_df.groupby("Area")[
     ["GDP", "total_emission"]

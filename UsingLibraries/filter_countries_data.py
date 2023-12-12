@@ -35,7 +35,7 @@ def filter_gdp_data_countries(input_file, output_file, countries):
         all_countries_gdp_df["Country"].isin(countries)
     ]
 
-    # Standardize country name for United States 
+    # Standardize country name for United States
     # to match with Agrofood_co2_emission.csv
     filtered_countries_gdp_df["Country"] = filtered_countries_gdp_df[
         "Country"
